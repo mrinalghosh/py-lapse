@@ -10,6 +10,6 @@ This version of py-lapse was written for Python 3.6 and higher. You will need th
 pip install opencv-python
 ```
 
-## Authors
+### Author
 
-* **Mrinal Ghosh** - *Initial work* - (https://github.com/mrinalghosh)
+**Mrinal Ghosh** - *Initial work* - (https://github.com/mrinalghosh)
