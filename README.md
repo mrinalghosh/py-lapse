@@ -4,7 +4,7 @@ Simple timelapses from .png images.
 
 ### Prerequisites
 
-This version of py-lapse was written for Python 3.6 and higher. It uses the opencv-python library as well as several built in libraries.
+This version of py-lapse was written for Python 3.6 and higher. It uses opencv-python as well as the built in numpy, os and argparse libraries.
 
 Get and install OpenCV:
 ```sh
