@@ -1,4 +1,4 @@
-# Py-lapse
+# py-lapse
 
 Simple timelapses from .png images.
 
