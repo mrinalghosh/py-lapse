@@ -1,17 +1,26 @@
 # Py-lapse
 
-Create simple video timelapses from serial .png images.
+Simple timelapses from serial .png images.
 
 ### Prerequisites
 
-This version of py-lapse was written for python 3.6 and higher. It uses the opencv-python library as well as the built-in os and argparse libraries.
+This version of py-lapse was written for Python 3.6 and higher. It uses the opencv-python library as well as several built in libraries.
 
-To install OpenCv run the following in Command Prompt:
-
-```
+Get and install OpenCV:
+```sh
 pip install opencv-python
 ```
 
-### Author
+### API
 
-**Mrinal Ghosh** - *Initial work* - (https://github.com/mrinalghosh)
+Load directory of images and return video:
+```sh
+python py-lapse.py -arguments
+```
+
+Supported arguments:
+* -w - video width
+* -l - video height
+* -f - frames per second
+* -n - video name
+* -g - gamma (>1.0 brightens)
