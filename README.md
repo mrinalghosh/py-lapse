@@ -19,8 +19,8 @@ python py-lapse.py -arguments
 ```
 
 Supported arguments:
-* -w - video width
-* -l - video height
-* -f - frames per second
-* -n - video name
-* -g - gamma (>1.0 brightens)
+* -w (pixel video width)
+* -l (pixel video height)
+* -f (frames per second)
+* -n (video name)
+* -g (gamma - above 1.0 brightens)
