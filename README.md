@@ -1,6 +1,6 @@
 # Py-lapse
 
-Simple timelapses from serial .png images.
+Simple timelapses from .png images.
 
 ### Prerequisites
 
