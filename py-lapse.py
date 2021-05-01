@@ -20,21 +20,20 @@ def lapse(folder: str = None,
     images = sorted([img for img in os.listdir(folder) if img.endswith(extension)])
     frame = cv2.imread(os.path.join(folder, images[0]))
 
-#    if height is None or width is None:
-    
-    if name is None:
-        name = folder + 'movie.mp4'
-#        name = os.path.split(folder)[1]+'.mp4'
     height, width, layers = frame.shape
     if scale is not None:
-        width = int(width * scale)
         height = int(height * scale)
+        width = int(width * scale)
+    if name is None:
+        name = folder + 'movie.mp4'
+        
     video = cv2.VideoWriter(name, fourcc, fps, (width, height))
-
+    
+    print ("Saving {} ...".format(name))
     for image in images:
         im = cv2.imread(os.path.join(folder, image))
-        res = cv2.resize(cv2.LUT(im, table), (width, height), interpolation=cv2.INTER_AREA)
-        video.write(res)
+        im = cv2.resize(cv2.LUT(im, table), (width, height), interpolation=cv2.INTER_AREA)
+        video.write(im)
 
     cv2.destroyAllWindows()
     video.release()
@@ -52,3 +51,4 @@ if __name__ == '__main__':
     P = p.parse_args()
 
     lapse(folder=P.folder, scale=P.scale, fps=P.fps, name=P.name, gamma=P.gamma, extension=P.sufix)
+
